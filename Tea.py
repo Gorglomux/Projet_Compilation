@@ -13,7 +13,7 @@ for line in lines :
 
 
     line = re.split(" ",line)
-    c = line[ 0]
+    c = line[0]
     # On parcours la première lettre de chaque ligne
 
     if c =='C':
@@ -28,9 +28,12 @@ for line in lines :
     elif c == 'E':
         statesToAdd = int(line[1])
     elif c == 'I':
-        statesInit = line[1]
+        l = line [1:]
+        statesInit = [i for i in l]
     elif c == 'F':
-        statesEnd = line[1]
+        l = line[1:]
+        statesEnd = [i for i in l]
+        print(statesEnd)
     elif c == 'T':
         if len(line) == 4:
             line.append('')
